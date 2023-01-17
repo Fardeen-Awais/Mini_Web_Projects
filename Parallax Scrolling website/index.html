@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax effect | Vanilla Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+            <img id="stars" src="./Public/stars.png" alt="star">
+            <img id="moon" src="./Public/moon.png" alt="moon">
+            <img id="mountains_behind" src="./Public/mountains_behind.png" alt="mountains_behind">
+            <h2 id="text">Khaiber</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img id="mountains_front" src="./Public/mountains_front.png" alt="mountains_front">
+    </section>
+    <div id="sec" class="sec">
+        <h2>Parallax Effect</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium adipisci id excepturi, eaque nulla aperiam impedit quaerat expedita deleniti et consectetur accusamus illo magni quod minus nobis fuga porro aliquam! <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, sed! Laboriosam numquam atque autem repudiandae at inventore culpa, fuga nulla, alias nisi eveniet eaque aliquam possimus illum sequi sunt quis in. Sint officiis temporibus exercitationem id vitae quas excepturi quia quisquam ipsum delectus aspernatur veritatis, fugit nostrum dolores a eveniet perferendis beatae odio quasi laborum, quod accusamus fuga voluptatibus dolore! Officiis iure facere consectetur assumenda natus alias nemo tenetur, sit quod ipsum, reiciendis cumque facilis fuga illo nulla soluta quia earum molestias vero veniam hic quisquam sint architecto. Voluptates, laboriosam. <br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla enim voluptatum neque inventore, quae facilis sit accusantium aliquam debitis tempora rem reprehenderit placeat possimus quam quos autem dolorem aspernatur quasi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eveniet minus consectetur ipsum, ullam, mollitia eligendi recusandae sit deleniti veritatis deserunt sapiente dolorum sint esse incidunt alias nihil rem repellat!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolore molestias totam quidem architecto libero, alias tempore quis illum voluptate. Magnam nulla molestiae odio tenetur quam non totam, ratione rerum.
+            <br><br>
+        </p>
+    </div>
+    <script>
+
+        // Get the element by its id
+        let star = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let mountains_front = document.getElementById('mountains_front')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        console.log({star,moon,mountains_behind,mountains_front,btn,text})
+
+        // Add event listener
+
+        window.addEventListener('scroll',()=>{
+            let value = window.scrollY;
+            star.style.left = value + 'px'
+            moon.style.top = value * 2 + 'px'
+            btn.style.marginTop = value + 'px'
+            mountains_behind.style.top = value + 'px'
+            text.style.marginRight = value * 2  +  'px'
+
+        })
+    </script>
+</body>
+</html>
