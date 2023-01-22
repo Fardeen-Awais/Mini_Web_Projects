@@ -23,7 +23,7 @@ header{
     z-index: 100;
 }
 header .logo{
-    color: azure;
+    color: rgb(9, 11, 11);
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
@@ -39,7 +39,7 @@ header ul li{
     margin-left: 20px;
 }
 header ul li a{
-    color: antiquewhite;
+    color: rgb(25, 24, 22);
     text-decoration: none;
     font-weight: 100;
 }
@@ -52,15 +52,7 @@ section{
     align-items: center;
     overflow: hidden;
 }
-section::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top,rgb(39, 1, 39),transparent);
-    z-index: 1000;
-}
+
 
 section img{
     position: absolute;
@@ -71,8 +63,14 @@ section img{
     object-fit: cover;
     pointer-events: none;
 }
-section img#moon{
-    mix-blend-mode: screen;
+section img#birds{
+    width: 50em;
+    padding-right: 200px;
+}
+section img#rain{
+    width: 30%;
+    left: 300px;
+    top: -360px;
 }
 section img#mountains_front{
     z-index: 10;
@@ -80,10 +78,17 @@ section img#mountains_front{
 #text{
     position: absolute;
     right: -360px;
-    color: aliceblue;
+    color: rgb(0, 1, 1);
     font-size: 7em;
     white-space: nowrap;
     z-index: 9;
+}
+section img#plane{
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -300px;
+    z-index: 8;
+    width: 40em;
 }
 #btn{
     text-decoration: none;
@@ -93,9 +98,9 @@ section img#mountains_front{
     background: white;
     color: blue;
     font: 1.5em;
-    transform: translateY(100px);
+    transform: translateY(200px);
     cursor: pointer;
-    z-index: 0;
+    z-index: 3;
 }
 
 .sec{
